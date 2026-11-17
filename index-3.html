@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chapter 6 MCQ Quiz – Impacts of Computing</title>
+<style>
+:root{--bg:#eef2ff;--card:#fff;--tx:#1e2340;--mu:#6b7194;--pr:#5b5bf0;--pr2:#8b5cf6;--ok:#16a34a;--okb:#dcfce7;--no:#dc2626;--nob:#fee2e2;--bd:#e2e6f5;--sc:#fff7e0;--scb:#f4b400;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12142a;--card:#1c1f3d;--tx:#eceefc;--mu:#9aa0c8;--bd:#2c3060;--okb:#12391f;--nob:#411a1a;--sc:#35290a}}
+:root[data-theme="dark"]{--bg:#12142a;--card:#1c1f3d;--tx:#eceefc;--mu:#9aa0c8;--bd:#2c3060;--okb:#12391f;--nob:#411a1a;--sc:#35290a}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;
+background-image:radial-gradient(circle at 10% 0,rgba(91,91,240,.18),transparent 40%),radial-gradient(circle at 100% 100%,rgba(139,92,246,.18),transparent 40%)}
+.wrap{max-width:760px;margin:0 auto;padding:18px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:24px;box-shadow:0 10px 40px rgba(60,60,140,.12)}
+.hide{display:none!important}
+h1{margin:6px 0 4px;font-size:1.7rem;line-height:1.2}.mu{color:var(--mu)}
+.logo{width:72px;height:72px;border-radius:22px;background:linear-gradient(135deg,var(--pr),var(--pr2));display:grid;place-items:center;font-size:2.2rem;margin:0 auto 10px;box-shadow:0 8px 20px rgba(91,91,240,.4)}
+#start{text-align:center;margin-top:6vh}
+label{display:block;text-align:left;font-weight:600;font-size:.9rem;margin:16px 0 6px}
+input{width:100%;padding:14px 16px;border-radius:14px;border:2px solid var(--bd);background:var(--bg);color:var(--tx);font-size:1rem;outline:none}
+input:focus{border-color:var(--pr)}
+.btn{border:0;cursor:pointer;font-weight:700;font-size:1rem;padding:14px 22px;border-radius:14px;color:#fff;background:linear-gradient(135deg,var(--pr),var(--pr2));box-shadow:0 6px 18px rgba(91,91,240,.35);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}.btn.ghost{background:var(--bg);color:var(--tx);box-shadow:none;border:2px solid var(--bd)}
+.btn.full{width:100%;margin-top:22px}.err{color:var(--no);font-size:.85rem;min-height:1.2em;margin-top:8px}
+.facts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:14px 0}.facts span{background:var(--bg);border:1px solid var(--bd);padding:6px 12px;border-radius:99px;font-size:.8rem}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;font-size:.85rem}
+.who{font-weight:700}.pill{background:var(--card);border:1px solid var(--bd);border-radius:99px;padding:6px 12px;font-weight:600}
+.bar{height:10px;background:var(--bd);border-radius:9px;overflow:hidden;margin-bottom:14px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pr),var(--pr2));transition:width .4s}
+.tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.06em;padding:4px 10px;border-radius:99px;background:var(--bg);color:var(--pr);margin-bottom:10px}
+.scn{background:var(--sc);border-left:5px solid var(--scb);padding:12px 14px;border-radius:12px;margin-bottom:14px;font-size:.95rem;line-height:1.5}
+.scn b{display:block;font-size:.72rem;letter-spacing:.08em;color:#b07d00;margin-bottom:4px}
+.q{font-size:1.2rem;font-weight:700;line-height:1.4;margin:0 0 16px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:13px 14px;margin-bottom:10px;border-radius:14px;border:2px solid var(--bd);background:var(--card);color:var(--tx);font-size:1rem;cursor:pointer;transition:.15s}
+.opt:hover:not(:disabled){border-color:var(--pr);transform:translateX(3px)}
+.opt b{flex:none;width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:var(--bg);color:var(--pr)}
+.opt:disabled{cursor:default;color:var(--tx)}
+.opt.ok{background:var(--okb);border-color:var(--ok)}.opt.ok b{background:var(--ok);color:#fff}
+.opt.no{background:var(--nob);border-color:var(--no)}.opt.no b{background:var(--no);color:#fff}
+.fb{margin:6px 0 0;padding:12px 14px;border-radius:12px;font-weight:600}.fb.ok{background:var(--okb);color:var(--ok)}.fb.no{background:var(--nob);color:var(--no)}
+.nav{display:flex;gap:10px;justify-content:space-between;margin-top:18px}
+.idx{margin-top:16px}.idx h3{margin:12px 0 8px;font-size:.85rem;color:var(--mu)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:7px}
+.grid button{height:40px;border-radius:11px;border:2px solid var(--bd);background:var(--card);color:var(--tx);font-weight:700;cursor:pointer}
+.grid .c{background:var(--ok);border-color:var(--ok);color:#fff}.grid .w{background:var(--no);border-color:var(--no);color:#fff}.grid .cur{outline:3px solid var(--pr);outline-offset:2px}
+.legend{display:flex;gap:14px;font-size:.75rem;color:var(--mu);margin-top:10px;flex-wrap:wrap}
+#res{text-align:center}.ring{width:170px;height:170px;border-radius:50%;margin:14px auto;display:grid;place-items:center;background:conic-gradient(var(--pr) calc(var(--p)*1%),var(--bd) 0)}
+.ring div{width:134px;height:134px;border-radius:50%;background:var(--card);display:grid;place-items:center;font-size:2.2rem;font-weight:800}
+.msg{font-size:1.15rem;font-weight:700;margin:8px 0 4px}.stats{display:flex;gap:10px;justify-content:center;margin:16px 0;flex-wrap:wrap}
+.stats div{background:var(--bg);border:1px solid var(--bd);border-radius:14px;padding:10px 16px;min-width:96px}.stats b{display:block;font-size:1.3rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section id="start" class="card">
+  <div class="logo">💻</div>
+  <h1>Impacts of Computing</h1>
+  <div class="mu">Computer Science IX · Chapter 6 · MCQ Quiz</div>
+  <div class="facts"><span>📝 60 MCQs</span><span>🧩 5 Scenarios</span><span>✅ Instant answers</span></div>
+  <label for="nm">Student name</label><input id="nm" placeholder="Enter your full name" autocomplete="name">
+  <label for="rl">Roll number</label><input id="rl" placeholder="Enter your roll number" inputmode="numeric">
+  <div class="err" id="err"></div>
+  <button class="btn full" id="go">Start Quiz →</button>
+</section>
+
+<section id="quiz" class="hide">
+  <div class="top"><span class="who" id="who"></span><span class="pill" id="sc">Score 0</span></div>
+  <div class="bar"><i id="pb"></i></div>
+  <div class="card">
+    <span class="tag" id="tag"></span>
+    <div class="scn hide" id="scn"><b>🧩 SCENARIO</b><span id="stx"></span></div>
+    <p class="q" id="qt"></p>
+    <div id="ops"></div>
+    <div class="fb hide" id="fb"></div>
+    <div class="nav"><button class="btn ghost" id="pv">← Back</button><button class="btn ghost" id="ix">☰ Index</button><button class="btn" id="nx">Next →</button></div>
+    <div class="idx hide" id="idx"></div>
+  </div>
+</section>
+
+<section id="res" class="card hide">
+  <div class="logo">🏆</div>
+  <h1 id="rn"></h1><div class="mu" id="rr"></div>
+  <div class="ring" id="ring"><div id="pc"></div></div>
+  <div class="msg" id="ms"></div><div class="mu" id="ms2"></div>
+  <div class="stats"><div><b id="sa"></b>Correct</div><div><b id="sb"></b>Wrong</div><div><b id="sct"></b>Total</div></div>
+  <div class="nav"><button class="btn ghost" id="rv">Review answers</button><button class="btn" id="rs">Try again ↻</button></div>
+</section>
+</div>
+
+<script>
+const N=[
+["Which password is the strongest?",["12345678","password","Tr#9mK!2pQ","ali1999"],2],
+["Two-factor authentication gives:",["Faster login only","An extra layer of security","Free internet","Automatic backup"],1],
+["Updating the OS and software mainly helps to:",["Fix security weaknesses","Enlarge the screen","Increase internet speed","Delete old files"],0],
+["Phishing messages usually try to:",["Speed up your computer","Update your software","Steal personal or login details","Increase storage"],2],
+["A safe response to a suspicious email link is to:",["Click it quickly","Forward it to everyone","Reply with your password","Not click it"],3],
+["Backing up data means:",["Saving copies of important files safely","Deleting old files","Installing antivirus","Locking the screen"],0],
+["A VPN is used on public Wi-Fi to:",["Increase battery life","Encrypt the connection","Delete cookies","Speed up downloads"],1],
+["A secure shopping website URL begins with:",["http://","ftp://","https://","www only"],2],
+["Which authority restricts certain websites in Pakistan?",["NASA","FIFA","WHO","PTA"],3],
+["A device should be upgraded only when:",["The upgrade is really needed","A new model is released","A friend upgrades","An advert appears"],0],
+["Malware is software designed to:",["Speed up computers","Harm or exploit computers","Store files","Print documents"],1],
+["Which is an example of malware?",["Freeware","Shareware","Ransomware","Open source"],2],
+["Tricking people through fake emails to reveal information is:",["Spam","Cookies","Freeware","Phishing"],3],
+["Unauthorized access to computer systems is called:",["Hacking","Backup","Encryption","Formatting"],0],
+["Unwanted promotional emails are called:",["Cookies","Spam","Patents","Backups"],1],
+["Software that secretly collects user information is:",["Freeware","Shareware","Spyware","Firewall"],2],
+["Redirecting users to a fake website without their knowledge is:",["Phishing","Spamming","Hacking","Pharming"],3],
+["Small text files storing a user’s web interactions are:",["Cookies","Viruses","Patents","Trojans"],0],
+["A fake email claiming you won a lottery is a:",["Patent","Scam","Cookie","Backup"],1],
+["Using a cracked version of paid software is:",["Freeware","Open source","Software piracy","Shareware"],2],
+["Software that is free to use without payment is:",["Shareware","Malware","Spyware","Freeware"],3],
+["Software given on trial with an option to buy is:",["Shareware","Freeware","Open source","Spyware"],0],
+["Software with publicly available source code is:",["Shareware","Open source","Spyware","Pirated software"],1],
+["System security protects confidentiality, integrity and:",["Advertising","Animation","Availability","Addiction"],2],
+["Which is an example of system security?",["Spam","Adware","Phishing","Firewall"],3],
+["Keeping personal information safe from unauthorized access is:",["Information privacy","Piracy","Pharming","Innovation"],0],
+["False information spread deliberately to deceive is:",["Backup","Disinformation","Encryption","Innovation"],1],
+["A good way to avoid fake news is to:",["Share it quickly","Believe every post","Verify the source before sharing","Ignore the facts"],2],
+["Harassing or threatening someone online is:",["Pharming","Backup","Encryption","Cyberbullying"],3],
+["Excessive use of social media can lead to:",["Addiction","Faster typing","More storage","Better security"],0],
+["Robots doing hazardous or repetitive work show:",["Digital addiction","Increased productivity","Privacy loss","Piracy"],1],
+["Which is a harmful effect of computing innovation?",["Online learning","Faster communication","Electronic waste","Medical imaging"],2],
+["HCI focuses on:",["Cooling of hardware","File compression","Power supply","How humans interact with computers"],3],
+["Creation of software and e-commerce industries is:",["Economic impact","Cultural impact","Personal impact","Ethical impact"],0],
+["Concerns about hacking and data breaches relate to:",["Cultural impact","Ethical impact","Economic impact","Personal impact"],1],
+["Online archives that preserve traditions show:",["Economic impact","Hardware impact","Cultural impact","Legal impact"],2],
+["A patent usually lasts about:",["2 years","5 years","100 years","20 years"],3],
+["The Apple logo is an example of a:",["Trademark","Patent","Copyright","Cookie"],0],
+["An author automatically holds the ___ of a book:",["Patent","Copyright","Trademark","Cookie"],1],
+["Which network is safest for online banking?",["Free public Wi-Fi","Open café Wi-Fi","Password-protected private network","Unknown network"],2]
+];
+const S=[
+["Sara uses a long password with letters, numbers and symbols. She turns on two-factor authentication and saves copies of her files in the cloud.",[
+["Her password is strong because it has:",["Her birthday","Only digits","A mix of characters","Only her name"],2],
+["Two-factor authentication adds:",["An extra layer of security","Faster internet","A bigger screen","More RAM"],0],
+["Saving file copies in the cloud is called:",["Phishing","Backup","Hacking","Piracy"],1],
+["Backups help most if the laptop is:",["Stolen or damaged","Too bright","Connected to Wi-Fi","Very old"],0]]],
+["Ali gets an urgent “bank” email asking for login details through a link. He ignores it. Later, at a café, he avoids online banking on free Wi-Fi.",[
+["The email is an example of:",["Backup","Freeware","Open source","Phishing"],3],
+["Why avoid banking on public Wi-Fi?",["It is slow","Hackers can intercept data","It costs money","Banks block it"],1],
+["Which tool can encrypt a public Wi-Fi connection?",["Cookies","Spam","VPN","Shareware"],2],
+["The best action with the link is to:",["Click it","Forward it","Reply with his password","Not click it and check the sender"],3]]],
+["Bilal downloads a cracked copy of a paid video editor. His friend uses a free trial and later buys it. Another friend uses Linux, whose source code is public.",[
+["Bilal’s action is:",["Software piracy","Freeware","Shareware","Backup"],0],
+["The friend’s trial with an option to buy is:",["Freeware","Shareware","Spyware","Open source"],1],
+["Linux is an example of:",["Piracy","Malware","Open-source software","A scam"],2],
+["Following software license terms is part of:",["Pharming","Hacking","Spamming","Proper licensing"],3]]],
+["Hina spends many hours daily on social media. She feels anxious, gets threatening comments from a stranger and notices the app collects her personal data.",[
+["Her long hours online may lead to:",["Digital addiction","Faster hardware","Better backup","More storage"],0],
+["Threatening comments online are called:",["Pharming","Cyberbullying","Freeware","Backup"],1],
+["Collecting data without awareness raises:",["Faster internet","Lower costs","Privacy concerns","Better graphics"],2],
+["Hina can limit shared information by adjusting:",["Screen brightness","Keyboard layout","Font size","Privacy settings"],3]]],
+["Maria writes a novel, designs a logo for her shop and invents a new gadget.",[
+["Her novel is protected by:",["Patent","Trademark","Copyright","Cookie"],2],
+["Her shop logo identifies her products, so she can use a:",["Patent","Trademark","Spyware","Spam"],1],
+["Her new gadget can be protected by a:",["Trademark","Cookie","Spam","Patent"],3],
+["A patent usually lasts about:",["1 year","20 years","3 years","50 years"],1]]]
+];
+const Q=N.map(q=>({q:q[0],o:q[1],a:q[2]}));
+S.forEach((s,i)=>s[1].forEach(q=>Q.push({q:q[0],o:q[1],a:q[2],sc:s[0],sn:i+1})));
+const $=id=>document.getElementById(id),L="ABCD";
+let cur=0,ans=[],name="",roll="",review=false;
+const show=id=>["start","quiz","res"].forEach(s=>$(s).classList.toggle("hide",s!==id));
+
+$("go").onclick=()=>{
+  name=$("nm").value.trim();roll=$("rl").value.trim();
+  if(!name||!roll){$("err").textContent="Please enter both your name and roll number.";return}
+  $("err").textContent="";ans=Array(Q.length).fill(null);cur=0;review=false;
+  $("who").textContent="👤 "+name+" · Roll "+roll;show("quiz");draw();
+};
+function score(){return ans.filter((a,i)=>a===Q[i].a).length}
+function draw(){
+  const q=Q[cur],a=ans[cur];
+  $("tag").textContent=(q.sc?"SCENARIO "+q.sn+" · ":"")+"QUESTION "+(cur+1)+" OF "+Q.length;
+  $("scn").classList.toggle("hide",!q.sc);if(q.sc)$("stx").textContent=q.sc;
+  $("qt").textContent=q.q;
+  $("ops").innerHTML="";
+  q.o.forEach((t,i)=>{
+    const b=document.createElement("button");b.className="opt";b.innerHTML="<b>"+L[i]+"</b><span></span>";b.lastChild.textContent=t;
+    if(a!==null){b.disabled=true;if(i===q.a)b.classList.add("ok");else if(i===a)b.classList.add("no")}
+    b.onclick=()=>{ans[cur]=i;draw()};$("ops").appendChild(b);
+  });
+  const fb=$("fb");fb.classList.toggle("hide",a===null);
+  if(a!==null){const ok=a===q.a;fb.className="fb "+(ok?"ok":"no");
+    fb.textContent=ok?"✅ Correct! Well done.":"❌ Wrong. Correct answer: "+L[q.a]+") "+q.o[q.a]}
+  $("sc").textContent="Score "+score();
+  $("pb").style.width=(ans.filter(x=>x!==null).length/Q.length*100)+"%";
+  $("pv").style.visibility=cur?"visible":"hidden";
+  $("nx").textContent=cur===Q.length-1?"Finish ✓":"Next →";
+  $("nx").disabled=a===null&&!review;$("nx").style.opacity=$("nx").disabled?.5:1;
+  drawIdx();
+}
+function drawIdx(){
+  let h='<h3>QUESTIONS 1–'+N.length+'</h3><div class="grid">';
+  Q.forEach((q,i)=>{
+    if(i===N.length)h+='</div><h3>🧩 SCENARIO BASED · '+(N.length+1)+'–'+Q.length+'</h3><div class="grid">';
+    const c=ans[i]===null?"":ans[i]===q.a?"c":"w";
+    h+='<button data-i="'+i+'" class="'+c+(i===cur?" cur":"")+'">'+(i+1)+'</button>';
+  });
+  h+='</div><div class="legend"><span>🟩 Correct</span><span>🟥 Wrong</span><span>⬜ Not answered</span></div>';
+  $("idx").innerHTML=h;
+  $("idx").querySelectorAll("button").forEach(b=>b.onclick=()=>{cur=+b.dataset.i;draw()});
+}
+$("ix").onclick=()=>$("idx").classList.toggle("hide");
+$("pv").onclick=()=>{cur--;draw()};
+$("nx").onclick=()=>{if(cur<Q.length-1){cur++;draw()}else finish()};
+function finish(){
+  const s=score(),t=Q.length,p=Math.round(s/t*100);
+  $("rn").textContent=name;$("rr").textContent="Roll No: "+roll;$("pc").textContent=p+"%";
+  $("ring").style.setProperty("--p",p);
+  $("sa").textContent=s;$("sb").textContent=ans.filter((a,i)=>a!==null&&a!==Q[i].a).length;$("sct").textContent=t;
+  const m=p>=90?["🌟 Outstanding!","You have mastered Chapter 6."]:p>=75?["🎉 Great job!","Just a little more practice for full marks."]:p>=50?["👍 Good effort!","Revise the topics you missed and try again."]:["💪 Keep practicing!","Read the chapter once more and retry. You can do it!"];
+  $("ms").textContent=m[0];$("ms2").textContent=m[1];show("res");window.scrollTo(0,0);
+}
+$("rv").onclick=()=>{review=true;cur=0;show("quiz");draw()};
+$("rs").onclick=()=>{$("nm").value="";$("rl").value="";show("start")};
+</script>
+</body>
+</html>
